@@ -1,0 +1,15 @@
+#!/bin/bash
+echo "Provide a directory name: "
+
+read dirname
+
+if [ -d $dirname ]
+then
+	echo "Directory: $dirname already exists!"
+else 
+	mkdir $dirname
+	touch $dirname/index
+	cp -i filex $dirname/index
+	chmod 744 $dirname/index
+	echo "Directory: $dirname have been  created with an index file, config script copied into it!"
+fi

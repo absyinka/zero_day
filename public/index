@@ -1,0 +1,11 @@
+#!/bin/bash
+if [ -d "public" ]
+then
+	echo "Directory: 'public' already exists!"
+else 
+	mkdir public
+	touch public/index
+	cp -i filex public/index
+	chmod 744 public/index
+	echo "Directory created with index file, config copied!"
+fi
