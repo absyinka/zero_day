@@ -6,7 +6,7 @@ read -p 'Enter Commit message: ' commit_message
 
 git add . && git commit -m "$commit_message" 
 
-if [[ "$BRANCH" == "master" ]]
+if [[ "$BRANCH" == "master" || "$BRANCH" == "main" ]]
 then
 	git push;
 	exit 1;
